@@ -24,5 +24,3 @@ jobs:
         run: echo "value=$(printf -- '%s' '${{ toJSON(strategy.matrix) }}')" >> "$GITHUB_OUTPUT"
       - id: include
         run: echo "value=$(printf -- '%s' '${{ toJSON(strategy.matrix.include) }}')" >> "$GITHUB_OUTPUT"
-      - run: echo '${{ steps.matrix.outputs.value }}' | tee matrix.json
-      - run: jq . matrix.json
