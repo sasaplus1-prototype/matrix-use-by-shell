@@ -1,11 +1,11 @@
-name: test
+name: dynamic
 
 on:
   - push
   - workflow_dispatch
 
 jobs:
-  test:
+  dynamic:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     strategy:
